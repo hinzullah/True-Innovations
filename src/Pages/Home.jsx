@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="w-full h-screen overflow-auto text-gray-900">
       <div className="flex flex-col md:grid md:grid-cols-2 h-full">
-        {/* IMAGE SIDE */}
+        {/* Image side */}
         <div className="hidden md:block relative h-full">
           <img
             src={banner}
@@ -17,9 +17,9 @@ const Home = () => {
           />
         </div>
 
-        {/* TEXT SIDE */}
+        {/* Text side */}
         <div className="w-full h-full flex flex-col px-6 py-6 my-auto md:px-12 md:py-8">
-          {/* HEADER */}
+          {/* Header */}
           <header className="flex flex-row justify-between items-center">
             <img
               src={Chukskitchen}
@@ -28,16 +28,16 @@ const Home = () => {
             />
 
             <a
-              href="#"
+              href="/login"
               className="text-[#1E88E5] px-3 py-1.5 border-2 border-[#1E88E5] rounded-md text-sm font-medium hover:bg-[#1E88E5]/10 transition-colors"
             >
               Sign In
             </a>
           </header>
 
-          {/* MAIN */}
+          {/* main */}
           <main className="flex flex-col space-y-8 my-auto py-8">
-            {/* HERO TEXT */}
+            {/* hero text */}
             <div className="space-y-2">
               <h1 className="text-2xl font-bold text-center leading-snug">
                 Your Authentic Taste of Nigeria

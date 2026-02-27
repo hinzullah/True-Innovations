@@ -2,7 +2,7 @@ import React from "react";
 import delight from "../assets/delight.jpg";
 import jollof from "../assets/image 3.jpg";
 
-const Jollof = () => {
+const Jollof = ({ headingAlign = "center" }) => {
   const JollofItems = [
     {
       id: 1,
@@ -27,10 +27,15 @@ const Jollof = () => {
     },
   ];
 
+  const alignClass = headingAlign === "left" ? "items-start" : "items-center";
+  const textalignClass = headingAlign === "left" ? "text-left" : "text-center";
+
   return (
-    <div className="flex flex-col items-center bg-white gap-8 py-16 px-4 sm:px-6 md:px-12 lg:px-24">
+    <div
+      className={`flex flex-col ${alignClass} bg-white gap-8 py-16 px-4 sm:px-6 md:px-12 lg:px-24`}
+    >
       <div className="w-full max-w-7xl">
-        <h2 className="text-2xl md:text-2xl font-medium text-left">
+        <h2 className={`text-2xl md:text-2xl font-medium ${textalignClass}`}>
           Jollof and Entries
         </h2>
       </div>

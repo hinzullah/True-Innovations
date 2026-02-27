@@ -2,7 +2,7 @@ import React from "react";
 import amala from "../assets/image 1.jpg";
 import semo from "../assets/image 2.jpg";
 
-const Swallow = () => {
+const Swallow = ({ headingAlign = "center" }) => {
   const SwallowItems = [
     {
       id: 1,
@@ -27,11 +27,15 @@ const Swallow = () => {
       price: 3500,
     },
   ];
+  const alignClass = headingAlign === "left" ? "items-start" : "items-center";
+  const textalignClass = headingAlign === "left" ? "text-left" : "text-center";
 
   return (
-    <div className="flex flex-col items-center bg-white gap-8 py-16 px-4 sm:px-6 md:px-12 lg:px-24">
+    <div
+      className={`flex flex-col ${alignClass} bg-white gap-8 py-16 px-4 sm:px-6 md:px-12 lg:px-24`}
+    >
       <div className="w-full max-w-7xl">
-        <h2 className="text-2xl md:text-2xl font-medium text-left">
+        <h2 className={`text-2xl md:text-2xl font-medium ${textalignClass}`}>
           Swallow and Soup
         </h2>
       </div>

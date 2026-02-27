@@ -13,15 +13,15 @@ const Explore = () => {
           alt="Welcome"
           className="absolute inset-0 w-full h-[75vh] object-cover"
         />
-        <div className="absolute inset-0 h-[75vh] bg-[#000]/60" />
+        <div className="absolute inset-0 h-[75vh] bg-black/60" />
 
         {/* Content */}
         <div className="absolute inset-0 text-[#eee] flex flex-col justify-center z-10 px-4 sm:px-6 md:px-12 lg:px-24">
-          <div className="max-w-2xl space-y-4 sm:space-y-5 md:space-y-6">
-            <h2 className="text-1.5xl sm:text-2xl md:text-xl lg:text-1.5xl font-medium leading-relaxed">
+          <div className="max-w-2xl space-y-2 sm:space-y-3 md:space-y-1">
+            <h2 className="text-1.5xl sm:text-2xl md:text-2xl lg:text-1.5xl font-medium leading-relaxed">
               Chuks Kitchen
             </h2>
-            <p className="font-medium text-md sm:text-lg md:text-sm">
+            <p className=" text-md sm:text-lg md:text-sm">
               Chuks Kitchen Nigerian Home Cooking 4.8 (1.2k)
             </p>
           </div>
@@ -52,9 +52,9 @@ const Explore = () => {
           </li>
         </ul>
       </div>
-      <Popular />
-      <Jollof />
-      <Swallow />
+      <Popular headingAlign="left" showDetails={true} />
+      <Jollof headingAlign="left" />
+      <Swallow headingAlign="left" />
     </div>
   );
 };

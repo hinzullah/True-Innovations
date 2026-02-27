@@ -6,6 +6,7 @@ import Signup from "./Pages/Signup.jsx";
 import Explore from "./Pages/Explore.jsx";
 import Orders from "./Pages/Orders.jsx";
 import Landpage from "./Pages/Landpage.jsx";
+import FoodDetails from "./Components/FoodDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: "/signup", element: <Signup /> },
       { path: "/landpage", element: <Landpage /> },
       { path: "/explore", element: <Explore /> },
+      { path: "/food-details", element: <FoodDetails /> },
       { path: "/orders", element: <Orders /> },
     ],
   },

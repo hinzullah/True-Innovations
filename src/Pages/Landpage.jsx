@@ -41,7 +41,7 @@ const Landpage = () => {
         </div>
       </div>
 
-      <Popular />
+      <Popular headingAlign="center" showDetails={false} />
       <Special />
     </>
   );

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Chukskitchen from "../assets/Chuks Kitchen.png";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import { BsCart3 } from "react-icons/bs";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,58 +11,64 @@ const Header = () => {
     <>
       <div className="flex items-center justify-between p-3 sm:p-4 bg-[#eee] text-gray-900">
         {/* Logo */}
-        <img
-          src={Chukskitchen}
-          alt="Chuks Kitchen"
-          className="h-5 sm:h-6 w-auto"
-        />
+
+        <NavLink
+          to="/landpage"
+          className="text-lg sm:text-xl font-bold text-[#4f290e]"
+        >
+          <img
+            src={Chukskitchen}
+            alt="Chuks Kitchen"
+            className="h-5 sm:h-6 w-auto"
+          />
+        </NavLink>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex font-medium text-[#4f290e] flex-1 justify-evenly max-w-2xl mx-8 lg:mx-12">
           <li>
-            <a href="/" className="hover:text-[#FF7A18] transition-colors">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `transition-colors ${isActive ? "text-[#FF7A18]" : "hover:text-[#FF7A18]"}`
+              }
+            >
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="/explore"
-              className="hover:text-[#FF7A18] transition-colors"
+            <NavLink
+              to="/explore"
+              className={({ isActive }) =>
+                `transition-colors ${isActive ? "text-[#FF7A18]" : "hover:text-[#FF7A18]"}`
+              }
             >
               Explore
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="/orders"
-              className="hover:text-[#FF7A18] transition-colors"
+            <NavLink
+              to="/orders"
+              className={({ isActive }) =>
+                `transition-colors ${isActive ? "text-[#FF7A18]" : "hover:text-[#FF7A18]"}`
+              }
             >
-              My Order
-            </a>
+              My Orders
+            </NavLink>
           </li>
           <li>
-            <a
-              href="/account"
-              className="hover:text-[#FF7A18] transition-colors"
+            <NavLink
+              to="/account"
+              className={({ isActive }) =>
+                `transition-colors ${isActive ? "text-[#FF7A18]" : "hover:text-[#FF7A18]"}`
+              }
             >
               Account
-            </a>
+            </NavLink>
           </li>
         </ul>
 
         {/* Right Side - Cart & Login & Hamburger */}
         <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
-          {/* Cart Icon */}
-          <a
-            href="#"
-            className="relative hover:text-[#FF7A18] transition-colors"
-          >
-            <BsCart3 size={20} className="sm:w-[22px] sm:h-[22px]" />
-            <span className="absolute -top-2 -right-2 bg-[#FF7A18] text-white text-xs rounded-full h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center font-medium">
-              3
-            </span>
-          </a>
-
           {/* Login Button - Hidden on mobile */}
           <a
             href="/login"
@@ -88,7 +94,7 @@ const Header = () => {
             <li className="border-b border-gray-300">
               <a
                 href="#"
-                className="block px-4 py-3 hover:bg-gray-200 hover:text-[#FF7A18] transition-colors"
+                className="block px-4 py-3 active:text-[#FF7A18] hover:bg-gray-200 hover:text-[#FF7A18] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
